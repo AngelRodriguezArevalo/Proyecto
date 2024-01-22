@@ -28,9 +28,8 @@ class LoginActivity : AppCompatActivity() {
 
     // EVENTO AL PULSAR EL BOTÓN REGISTRAR
     private fun registro() {
-        binding.buttonRegistrarLogin.setOnClickListener {
-            startActivity(Intent(this, RegistroActivity::class.java))
-        }
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 
     // EVENTO AL PULSAR EL BOTÓN INICIAR SESIÓN

@@ -30,7 +30,7 @@ open class ActivityWithMenus : AppCompatActivity() {
         return when (item.itemId){
             R.id.eventos -> {
                 actividadActual = 0
-                // hacemos que se abra la pantalla del listado de parques
+                // hacemos que se abra la pantalla principal (eventos)
                 val intent = Intent(this, MainActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
                 startActivity(intent)
