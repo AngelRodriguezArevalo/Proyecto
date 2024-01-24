@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
     // EVENTO AL PULSAR EL BOTÓN REGISTRAR
     private fun registro() {
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, CrearEventoActivity::class.java)
         startActivity(intent)
     }
 
