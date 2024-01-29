@@ -36,6 +36,22 @@ open class ActivityWithMenus : AppCompatActivity() {
                 startActivity(intent)
                 true
             }
+            R.id.crearEvento -> {
+                actividadActual = 1
+                // hacemos que se abra la pantalla crear eventos
+                val intent = Intent(this, CrearEventoActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+                startActivity(intent)
+                true
+            }
+            R.id.cerrarSesion -> {
+                actividadActual = 2
+                // hacemos que se cierre sesión y se abra la pantalla de login
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+                startActivity(intent)
+                true
+            }
 
             else -> super.onOptionsItemSelected(item)
         }

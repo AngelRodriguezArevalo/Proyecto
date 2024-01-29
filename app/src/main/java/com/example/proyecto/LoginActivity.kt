@@ -47,12 +47,12 @@ class LoginActivity : AppCompatActivity() {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     }else{
-                        Toast.makeText(this, "Correo o contraseña incorrecto", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Correo o contraseña incorrectos. Revise los datos introducidos.", Toast.LENGTH_LONG).show()
                     }
                 }
 
         } else {
-            Toast.makeText(this, "Algún campo está vacío", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Algún campo está vacío. Por favor, ingrese todos los datos necesarios.", Toast.LENGTH_SHORT).show()
         }
     }
 

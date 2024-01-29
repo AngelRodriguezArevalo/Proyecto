@@ -40,14 +40,15 @@ class RegistroActivity : AppCompatActivity() {
                                     "apellidos" to binding.editTextApellidosRegistro.text.toString()
                                 ))
 
-                            Toast.makeText(this, "Se han registrado los datos con éxito", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Se han registrado los datos con éxito.", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this, LoginActivity::class.java))
                         }
                         //si no, nos avisa del error
-                        else{Toast.makeText(this, "No se han podido registrar los datos", Toast.LENGTH_SHORT).show()}
+                        else{Toast.makeText(this, "Ha ocurrido un error. No se han podido registrar los datos." +
+                                "Revise que todos los datos son correctos.", Toast.LENGTH_SHORT).show()}
                     }
 
-            }else{Toast.makeText(this, "Algún campo está vacío", Toast.LENGTH_SHORT).show()}
+            }else{Toast.makeText(this, "Algún campo está vacío. Por favor, ingrese todos los datos necesarios.", Toast.LENGTH_SHORT).show()}
         }
     }
 }
