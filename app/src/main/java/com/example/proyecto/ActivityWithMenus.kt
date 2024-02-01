@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 open class ActivityWithMenus : AppCompatActivity() {
 
@@ -47,6 +48,7 @@ open class ActivityWithMenus : AppCompatActivity() {
             R.id.cerrarSesion -> {
                 actividadActual = 2
                 // hacemos que se cierre sesión y se abra la pantalla de login
+                FirebaseAuth.getInstance().signOut()
                 val intent = Intent(this, LoginActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
                 startActivity(intent)

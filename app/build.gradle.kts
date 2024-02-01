@@ -42,6 +42,7 @@ android {
 
 dependencies {
 
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
     implementation("androidx.core:core-ktx:1.9.0")
